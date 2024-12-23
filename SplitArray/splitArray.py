@@ -12,12 +12,16 @@ def splitArray(nums):
             return sum1 == sum2
         
         # Recursive case: Try including the current number in either of the two groups
-        return helper(index + 1, sum1 + nums[index], sum2) or helper(index + 1, sum1, sum2 + nums[index])
+        return helper(index + 1, sum1 + nums[index],sum2) or helper(index + 1, sum1, sum2 + nums[index])
     
     # Initial call to the helper function
     return helper(0, 0, 0)
 
 # Example usage
-print(splitArray([1, 2, 3, 4]))  # Output: True
-print(splitArray([1, 1, 1, 2, 2]))  # Output: True
-print(splitArray([1, 2, 3, 5]))  # Output: False
+print(splitArray([1, 2, 3, 4])) 
+print(splitArray([1, 1, 1, 2, 2])) 
+print(splitArray([1, 2, 3, 5])) 
+
+rat = [1, 3, 4, 5]
+print (len(rat))
+
